@@ -8,7 +8,6 @@ function rangeDefined(){
     let num1 = document.getElementById('num1').value;
 
     let num2 = document.getElementById('num2').value;
-    console.log(num2);
 
     if(num1 === '' || num2 === ''){
         alert('Please enter the range of numbers for the game.');
@@ -43,7 +42,6 @@ function userGuessedNumber(){
             counter = counter + 1;
         }      
     }
-    console.log(counter); 
 
     if(counter === 3 && parseInt(numberGuessedUser) !==  parseInt(numberGuessedComputer)){
         document.querySelector('.maxAttempt').style.display = 'block';
