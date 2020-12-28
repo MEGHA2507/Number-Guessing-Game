@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Guesser App</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-heading">
+            <h1>Number Guesser</h1>
+        </div>
+        <div class="card-content">
+            <p>Please enter the range of the number in which you want to play the game.</p>
+            <form>
+                <label>Enter a number : </label>
+                <input type="number" id="num1">
+                <label>Enter another number : </label>
+                <input type="number" id="num2">
+
+                <button type="submit" onclick="rangeDefined()">Range Defined</button>
+            </form>
+            <div class="play">
+                <label>Enter a guessed number in the range : </label>
+                <input type="number" id="selectedNum">
+                <button onclick="userGuessedNumber()">Guess The Number</button>
+                <p class="more loose">Your guess is incorrect. The number is smaller than the guessed number.Please try again.</p>
+                <p class="less loose">Your guess is incorrect. The number is larger than the guessed number.Please try again.</p>
+                <p class="won">You guessed it right. You have won the game!! Winner !!</p>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
