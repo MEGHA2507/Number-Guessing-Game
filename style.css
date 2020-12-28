@@ -34,17 +34,23 @@ button{
     background-color: black;
     color: white;
 }
-.won, .loose{
+.won, .loose, .maxAttempt{
     display: none;
     font-size: 20px;
     line-height: 24px;
     margin-top: 0;
 }
+#selectedNum:disabled{
+    background-color: rgb(171, 171, 241);
+}
 .won{
     color: green;
 }
-.loose{
+.loose, .maxAttempt{
     color: red;
+}
+.reset{
+    display: none;
 }
 
 @media (max-width: 767px){

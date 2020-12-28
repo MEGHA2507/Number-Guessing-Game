@@ -24,7 +24,9 @@ function rangeDefined(){
     }
 }
 
+let counter = 0;
 function userGuessedNumber(){
+
     let numberGuessedUser = document.getElementById('selectedNum').value;
     console.log(numberGuessedUser);
 
@@ -32,19 +34,28 @@ function userGuessedNumber(){
         document.querySelector('.won').style.display = 'block';
         document.querySelector('.more').style.display = 'none';
         document.querySelector('.less').style.display = 'none';
+        counter = counter + 1;
     }else{
         if(numberGuessedUser < numberGuessedComputer){
             document.querySelector('.less').style.display = 'block';
             document.querySelector('.won').style.display = 'none';
             document.querySelector('.more').style.display = 'none';
+            counter = counter + 1;
         }else{
             document.querySelector('.more').style.display = 'block';
             document.querySelector('.won').style.display = 'none';
             document.querySelector('.less').style.display = 'none';
-        }
-       
-        
+            counter = counter + 1;
+        }      
     }
+    console.log(counter); 
+
+    if(counter === 3){
+        document.querySelector('.maxAttempt').style.display = 'block';
+        document.getElementById('selectedNum').disabled = true;
+    }
+
+    
 
 }
 
