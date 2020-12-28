@@ -34,6 +34,7 @@ function userGuessedNumber(){
         document.querySelector('.won').style.display = 'block';
         document.querySelector('.more').style.display = 'none';
         document.querySelector('.less').style.display = 'none';
+        document.querySelector('.reset').style.display = 'block';
         counter = counter + 1;
     }else{
         if(numberGuessedUser < numberGuessedComputer){
@@ -50,17 +51,25 @@ function userGuessedNumber(){
     }
     console.log(counter); 
 
-    if(counter === 3){
+    if(counter === 3 && parseInt(numberGuessedUser) !==  parseInt(numberGuessedComputer)){
         document.querySelector('.maxAttempt').style.display = 'block';
         document.getElementById('selectedNum').disabled = true;
+        document.querySelector('.reset').style.display = 'block';
     }
 
-    
+    document.getElementById('selectedNum').value = '';
 
 }
 
-
-
-
-
-
+function playAgain(){
+    document.getElementById('num1').value = '';
+    document.getElementById('num2').value = '';
+    document.getElementById('selectedNum').value = '';
+    document.querySelector('.reset').style.display = 'none';
+    document.getElementById('selectedNum').disabled = false;
+    document.querySelector('.won').style.display = 'none';
+    document.querySelector('.more').style.display = 'none';
+    document.querySelector('.less').style.display = 'none';
+    document.querySelector('.maxAttempt').style.display = 'none';     
+    document.querySelector('.play').style.display = 'none'; 
+}
